@@ -1,0 +1,197 @@
+/* CSS for the Social Media Web App */
+
+/* Set box-sizing to border-box to include padding and border in element's total width and height */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Style the header of the page */
+h1 {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1em;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 3em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  animation: neon 1s ease-in-out infinite alternate;
+  -webkit-animation: neon 1s ease-in-out infinite alternate;
+}
+
+@keyframes neon {
+  from {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #fff, 0 0 25px #fff, 0 0 30px #fff, 0 0 35px #fff;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #7fdbda, 0 0 25px #7fdbda, 0 0 30px #7fdbda, 0 0 35px #7fdbda;
+  }
+}
+
+
+/* Style the main container */
+.container {
+  margin: 2em auto;
+  max-width: 800px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2em;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Style the left column */
+.left {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0 1em;
+  box-sizing: border-box; /* include padding in width */
+}
+
+.left h2 {
+  font-size: 2em;
+  margin-bottom: 0.5em;
+}
+
+.left form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1em;
+}
+
+.left label {
+  font-size: 1.2em;
+  margin-bottom: 0.5em;
+}
+
+.left textarea {
+  font-size: 1.2em;
+  padding: 0.5em;
+  border-radius: 0.25em;
+  border: 2px solid #ccc;
+  resize: none;
+  margin-bottom: 1em;
+}
+
+.left button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 0.5em;
+  border-radius: 0.25em;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.left button:hover {
+  background-color: #444;
+}
+
+/* Style the right column */
+.right {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0 1em;
+  box-sizing: border-box; /* include padding in width */
+}
+
+.right h2 {
+  font-size: 2em;
+  margin-bottom: 0.5em;
+}
+
+.right ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.right li {
+  border: 2px solid #ccc;
+  border-radius: 0.25em;
+  padding: 1em;
+  margin-bottom: 1em;
+  background-color: #fff;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease-in-out;
+}
+
+.right li:hover {
+  transform: translateY(-0.25em);
+}
+
+.right p {
+  font-size: 1.2em;
+  margin-bottom: 0.5em;
+}
+
+.right small {
+  color: #888;
+  font-size: 0.8em;
+}
+
+.right span {
+  float: right;
+  font-size: 1.2em;
+  margin-left: 1em;
+}
+
+.right i {
+  cursor: pointer;
+  transition: color 0.2s ease-in-out;
+}
+
+.right i:hover {
+  color: #333;
+}
+
+@media only screen and (min-width: 768px) {
+  /* On screens larger than 768px, split container into two columns */
+  .container {
+    flex-wrap: nowrap;
+  }
+  .left {
+    width: 50%;
+  }
+  .right {
+    width: 50%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  /* On screens larger than 1200px, increase max-width of container */
+  .container {
+    max-width: 1200px;
+  }
+}
+/* Style the posts */
+#posts {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Style the post item */
+#posts div {
+  margin-bottom: 1em;
+  padding: 1em;
+  border: 1px solid #ccc;
+}
+
+/* Style the post options */
+.options {
+  overflow: hidden;
+  float: right;
+  display: flex;
+  gap: 23px;
+  cursor: pointer;
+}
+
